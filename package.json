@@ -27,6 +27,7 @@
   "keywords": [
     "pi",
     "pi-extension",
+    "pi-package",
     "a2a",
     "agent2agent",
     "multi-agent",
@@ -53,6 +54,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "pi": {
+    "extensions": ["./dist/index.js"]
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
