@@ -1,0 +1,44 @@
+{
+  "name": "pi-a2a-communication",
+  "version": "1.0.0",
+  "description": "Enterprise-grade A2A protocol implementation for pi coding agent",
+  "author": "pi-extensions",
+  "license": "MIT",
+  "category": "communication",
+  "tags": ["a2a", "multi-agent", "distributed", "enterprise", "orchestration"],
+  "repository": "https://github.com/DrOlu/pi-a2a-communication",
+  "homepage": "https://github.com/DrOlu/pi-a2a-communication#readme",
+  "npm": "https://www.npmjs.com/package/pi-a2a-communication",
+  "installation": {
+    "npm": "npm install pi-a2a-communication",
+    "pi": "cd ~/.pi/agent/extensions && git clone https://github.com/DrOlu/pi-a2a-communication.git"
+  },
+  "commands": [
+    "/a2a-discover",
+    "/a2a-agents",
+    "/a2a-send",
+    "/a2a-broadcast",
+    "/a2a-chain",
+    "/a2a-status",
+    "/a2a-cancel",
+    "/a2a-server",
+    "/a2a-config",
+    "/a2a-help"
+  ],
+  "tools": ["a2a_call", "a2a_parallel"],
+  "compatibility": {
+    "pi": ">=1.0.0",
+    "node": ">=18.0.0"
+  },
+  "features": [
+    "Agent discovery via Agent Cards",
+    "Single, parallel, chain, async task execution",
+    "A2A server mode",
+    "Enterprise security (OAuth2, mTLS, Bearer, API Key)",
+    "Streaming and SSE support",
+    "Health monitoring",
+    "Task lifecycle management"
+  ],
+  "screenshots": [],
+  "documentation": "https://github.com/DrOlu/pi-a2a-communication/blob/main/README.md"
+}
