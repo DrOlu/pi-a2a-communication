@@ -49,7 +49,7 @@ export class AgentDiscovery {
         throw new Error(`Failed to fetch agent card: ${response.status} ${response.statusText}`);
       }
 
-      const card: AgentCard = await response.json();
+      const card: AgentCard = await response.json() as AgentCard;
       
       // Validate required fields
       if (!card.name || !card.description || !card.version) {

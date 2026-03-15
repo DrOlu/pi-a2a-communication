@@ -631,11 +631,13 @@ Examples:
       }
 
       try {
-        const agent = await agentDiscovery.discoverAgent(params.agent_url);
+        const agent_url = params.agent_url as string;
+        const message = params.message as string;
+        const agent = await agentDiscovery.discoverAgent(agent_url);
         
-        const result = await taskManager.sendTask(agent, params.message, {
-          streaming: params.streaming ?? true,
-          timeout: params.timeout ?? 60000,
+        const result = await taskManager.sendTask(agent, message, {
+          streaming: (params.streaming as boolean) ?? true,
+          timeout: (params.timeout as number) ?? 60000,
           signal,
         }, onUpdate ? (update) => {
           if (update.status?.state) {
@@ -706,14 +708,15 @@ Examples:
 
       try {
         // Discover all agents
+        const tasks = params.tasks as Array<{ agent_url: string; message: string }>;
         const agents = await Promise.all(
-          params.tasks.map(t => agentDiscovery!.discoverAgent(t.agent_url))
+          tasks.map((t: { agent_url: string }) => agentDiscovery!.discoverAgent(t.agent_url))
         );
 
         const taskConfigs = agents.map((agent, i) => ({
           agent,
-          message: params.tasks[i].message,
-          options: { timeout: params.timeout ?? 60000, signal },
+          message: tasks[i].message,
+          options: { timeout: (params.timeout as number) ?? 60000, signal },
         }));
 
         const results = await taskManager.sendParallelTasks(taskConfigs);

@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsc && npm run build:cjs",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs --declaration false && mv dist/cjs/index.js dist/index.cjs",
+    "build:cjs": "tsc -p tsconfig.cjs.json && mv dist/cjs/index.js dist/index.cjs",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext .ts",
     "test": "vitest"
@@ -37,25 +37,22 @@
     "google-a2a",
     "agent-collaboration"
   ],
-  "author": "pi-extensions",
+  "author": "pi-extensions <extensions@pi.dev>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pi-extensions/pi-a2a-communication.git"
+    "url": "git+https://github.com/DrOlu/pi-a2a-communication.git"
   },
   "bugs": {
-    "url": "https://github.com/pi-extensions/pi-a2a-communication/issues"
+    "url": "https://github.com/DrOlu/pi-a2a-communication/issues"
   },
-  "homepage": "https://github.com/pi-extensions/pi-a2a-communication#readme",
+  "homepage": "https://github.com/DrOlu/pi-a2a-communication#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "peerDependencies": {
-    "@mariozechner/pi-coding-agent": ">=1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

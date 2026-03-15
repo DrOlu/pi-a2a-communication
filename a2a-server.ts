@@ -216,7 +216,7 @@ export class A2AServer {
       return;
     }
 
-    const { message, configuration, metadata } = request.params || {};
+    const { message, configuration, metadata } = request.params as { message?: Message; configuration?: { returnImmediately?: boolean }; metadata?: Record<string, unknown> } || {};
     
     if (!message) {
       this.sendJSONRPCError(res, request.id, -32602, "Invalid params: message required");
