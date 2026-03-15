@@ -1,0 +1,246 @@
+{
+  "agents": [
+    {
+      "name": "code-scout",
+      "description": "Fast codebase reconnaissance agent that finds code patterns and structures",
+      "url": "https://scout.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Example Corp",
+        "url": "https://example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": false,
+        "extendedAgentCard": false
+      },
+      "skills": [
+        {
+          "id": "find-code",
+          "name": "Find Code Patterns",
+          "description": "Search and locate specific code patterns, functions, or structures",
+          "tags": ["search", "find", "code"],
+          "examples": ["Find all functions named 'getUser'", "Locate authentication middleware"]
+        },
+        {
+          "id": "analyze-structure",
+          "name": "Analyze Code Structure",
+          "description": "Analyze and report on codebase structure and organization",
+          "tags": ["structure", "architecture", "analysis"],
+          "examples": ["Describe the project structure", "Find all API endpoints"]
+        }
+      ],
+      "defaultInputModes": ["text/plain"],
+      "defaultOutputModes": ["text/plain", "application/json"],
+      "discoveredAt": 1700000000000
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Expert code review agent specializing in security, performance, and best practices",
+      "url": "https://reviewer.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Example Corp",
+        "url": "https://example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": true,
+        "extendedAgentCard": true
+      },
+      "skills": [
+        {
+          "id": "security-review",
+          "name": "Security Code Review",
+          "description": "Review code for security vulnerabilities and issues",
+          "tags": ["security", "review", "audit"],
+          "examples": ["Check for SQL injection vulnerabilities", "Review authentication logic"]
+        },
+        {
+          "id": "performance-review",
+          "name": "Performance Review",
+          "description": "Analyze code for performance issues and optimization opportunities",
+          "tags": ["performance", "optimization", "review"],
+          "examples": ["Identify N+1 queries", "Find memory leaks"]
+        },
+        {
+          "id": "best-practices",
+          "name": "Best Practices Review",
+          "description": "Review code against language and framework best practices",
+          "tags": ["best-practices", "style", "review"],
+          "examples": ["Check TypeScript best practices", "Review React patterns"]
+        }
+      ],
+      "defaultInputModes": ["text/plain", "text/code"],
+      "defaultOutputModes": ["text/plain", "text/markdown", "application/json"],
+      "discoveredAt": 1700000000000
+    },
+    {
+      "name": "code-generator",
+      "description": "Code generation agent that creates functions, classes, and full implementations",
+      "url": "https://generator.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Example Corp",
+        "url": "https://example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": false,
+        "extendedAgentCard": false
+      },
+      "skills": [
+        {
+          "id": "generate-function",
+          "name": "Generate Function",
+          "description": "Generate individual functions from descriptions",
+          "tags": ["generation", "function", "code"],
+          "examples": ["Create a function to validate email addresses", "Write a sorting utility"]
+        },
+        {
+          "id": "generate-class",
+          "name": "Generate Class/Module",
+          "description": "Generate classes, modules, or complete components",
+          "tags": ["generation", "class", "module", "component"],
+          "examples": ["Create a UserRepository class", "Generate a React component"]
+        },
+        {
+          "id": "implement-feature",
+          "name": "Implement Feature",
+          "description": "Implement complete features from specifications",
+          "tags": ["generation", "feature", "implementation"],
+          "examples": ["Implement user authentication", "Create REST API endpoints"]
+        }
+      ],
+      "defaultInputModes": ["text/plain"],
+      "defaultOutputModes": ["text/code", "text/plain"],
+      "discoveredAt": 1700000000000
+    },
+    {
+      "name": "test-generator",
+      "description": "Test generation agent specializing in unit, integration, and e2e tests",
+      "url": "https://testgen.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Example Corp",
+        "url": "https://example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": false,
+        "extendedAgentCard": false
+      },
+      "skills": [
+        {
+          "id": "unit-tests",
+          "name": "Generate Unit Tests",
+          "description": "Generate unit tests for functions and classes",
+          "tags": ["testing", "unit", "generation"],
+          "examples": ["Write unit tests for UserService", "Generate tests for validation functions"]
+        },
+        {
+          "id": "integration-tests",
+          "name": "Generate Integration Tests",
+          "description": "Generate integration tests for API endpoints and workflows",
+          "tags": ["testing", "integration", "api"],
+          "examples": ["Create integration tests for user API", "Test checkout workflow"]
+        },
+        {
+          "id": "e2e-tests",
+          "name": "Generate E2E Tests",
+          "description": "Generate end-to-end tests for complete user flows",
+          "tags": ["testing", "e2e", "playwright", "cypress"],
+          "examples": ["Create E2E tests for login flow", "Test complete purchase flow"]
+        }
+      ],
+      "defaultInputModes": ["text/plain", "text/code"],
+      "defaultOutputModes": ["text/code"],
+      "discoveredAt": 1700000000000
+    },
+    {
+      "name": "documentation-agent",
+      "description": "Documentation generation agent for API docs, READMEs, and guides",
+      "url": "https://docs-agent.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Example Corp",
+        "url": "https://example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": true,
+        "extendedAgentCard": false
+      },
+      "skills": [
+        {
+          "id": "api-docs",
+          "name": "Generate API Documentation",
+          "description": "Generate API documentation from code or specifications",
+          "tags": ["documentation", "api", "openapi"],
+          "examples": ["Generate OpenAPI spec from code", "Document REST API endpoints"]
+        },
+        {
+          "id": "readme",
+          "name": "Generate README",
+          "description": "Create README files for projects",
+          "tags": ["documentation", "readme", "markdown"],
+          "examples": ["Create README for this project", "Write installation guide"]
+        },
+        {
+          "id": "guides",
+          "name": "Generate Guides",
+          "description": "Create user guides, tutorials, and how-to documents",
+          "tags": ["documentation", "guide", "tutorial"],
+          "examples": ["Write getting started guide", "Create contribution guide"]
+        }
+      ],
+      "defaultInputModes": ["text/plain", "text/code"],
+      "defaultOutputModes": ["text/markdown"],
+      "discoveredAt": 1700000000000
+    },
+    {
+      "name": "security-scanner",
+      "description": "Security vulnerability scanning agent for comprehensive security audits",
+      "url": "https://security.example.com",
+      "version": "1.0.0",
+      "provider": {
+        "organization": "Security Team",
+        "url": "https://security.example.com"
+      },
+      "capabilities": {
+        "streaming": true,
+        "pushNotifications": true,
+        "extendedAgentCard": true
+      },
+      "skills": [
+        {
+          "id": "vulnerability-scan",
+          "name": "Vulnerability Scan",
+          "description": "Scan code for known security vulnerabilities",
+          "tags": ["security", "vulnerability", "scan"],
+          "examples": ["Scan for OWASP Top 10", "Check for CVE vulnerabilities"]
+        },
+        {
+          "id": "dependency-check",
+          "name": "Dependency Security Check",
+          "description": "Check dependencies for known vulnerabilities",
+          "tags": ["security", "dependencies", "npm", "pip"],
+          "examples": ["Check package.json for vulnerabilities", "Audit Python dependencies"]
+        },
+        {
+          "id": "compliance-check",
+          "name": "Compliance Check",
+          "description": "Verify compliance with security standards (SOC2, GDPR, etc.)",
+          "tags": ["security", "compliance", "audit"],
+          "examples": ["Check GDPR compliance", "Verify SOC2 requirements"]
+        }
+      ],
+      "defaultInputModes": ["text/plain", "text/code", "application/json"],
+      "defaultOutputModes": ["application/json", "text/markdown"],
+      "discoveredAt": 1700000000000,
+      "securityRequirements": [
+        { "schemes": { "bearer": [] } }
+      ]
+    }
+  ]
+}
